@@ -51,7 +51,7 @@ From your callback, you can:
 ### Example Usage
 ```javascript
 document.addEventListener('deviceready', function () {
-    UpdateNotifier.onReady(function () {
+    UpdateNotifier.onUpdateReady(function () {
         console.log("Update downloaded and ready!");
 
         // Your custom popup
