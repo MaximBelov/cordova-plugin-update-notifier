@@ -29,6 +29,39 @@ For Android, this implements the [Play Store In-App Update][playlib] system.
 > Use version 1.x if you are building without AndroidX enabled.
 
 
+## Custom JS Popup Support (Android)
+Starting from version `3.1.0`, this plugin allows you to **replace the default Snackbar update prompt**  
+with your own JavaScript popup logic.
+
+This is useful if you want to:
+- Use your app's existing UI components instead of Material Snackbar
+- Localize the update prompt dynamically
+- Show a modal dialog instead of a banner
+
+### How it works
+The plugin now exposes a `UpdateNotifier.onReady(callback)` function.  
+When the update is downloaded and ready to install, your callback is triggered from JavaScript.
+
+From your callback, you can:
+- Display a custom UI (e.g., alert, modal, toast)
+- Call `UpdateNotifier.completeUpdate()` to trigger installation
+
+---
+
+### Example Usage
+```javascript
+document.addEventListener('deviceready', function () {
+    UpdateNotifier.onReady(function () {
+        console.log("Update downloaded and ready!");
+
+        // Your custom popup
+        if (confirm("A new version is available. Install now?")) {
+            UpdateNotifier.completeUpdate();
+        }
+    });
+});
+```
+
 Installation
 ------------
 
