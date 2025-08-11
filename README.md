@@ -118,6 +118,11 @@ You can set the value to "critical", "annoying", "persistent", "hinting" and "re
 <preference name="SirenAlertType" value="relaxed" />
 ```
 
+Add swift support
+```xml
+<preference name="SwiftVersion" value="5.0" />
+```
+
 For Android, you can force all updates to be considered "immediate" with the `AndroidUpdateAlertType` preference in config.xml.
 
 ```xml
