@@ -15,7 +15,7 @@ var UpdateNotifier = {
       function (err) {
         console.error("UpdateNotifier onUpdateReady error", err);
       },
-      "UpdateNotifierPlugin",
+      "UpdateNotifier",
       "onUpdateReady",
       []
     );
@@ -31,7 +31,7 @@ var UpdateNotifier = {
       function (err) {
         console.error("UpdateNotifier completeUpdate error", err);
       },
-      "UpdateNotifierPlugin",
+      "UpdateNotifier",
       "completeUpdate",
       []
     );
