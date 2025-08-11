@@ -63,7 +63,7 @@ public class UpdateNotifierPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
         if ("onUpdateReady".equals(action)) {
             this.onUpdateReadyCallback = callbackContext;
-            PluginResult result = new PluginResult(PluginResult.Status.OK, true);
+            PluginResult result = new PluginResult(PluginResult.Status.NO_RESULT);
             result.setKeepCallback(true);
             callbackContext.sendPluginResult(result);
             return true;
